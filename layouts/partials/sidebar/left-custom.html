@@ -1,0 +1,74 @@
+<!-- 自定义侧边栏内容 -->
+<!-- 添加在主菜单下方 -->
+<div class="custom-sidebar-content">
+    <h3>自定义内容</h3>
+    <p>这里可以添加任何自定义内容</p>
+    
+    <!-- 示例：添加一个自定义链接列表 -->
+    <div class="custom-links">
+        <h4>快速链接</h4>
+        <ul>
+            <li><a href="#">链接 1</a></li>
+            <li><a href="#">链接 2</a></li>
+            <li><a href="#">链接 3</a></li>
+        </ul>
+    </div>
+    
+    <!-- 示例：添加一个通知框 -->
+    <div class="custom-notice">
+        <p>📢 这是一个通知消息</p>
+    </div>
+</div>
+
+<style>
+.custom-sidebar-content {
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.custom-sidebar-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.custom-links {
+    margin-top: 15px;
+}
+
+.custom-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.custom-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-links li {
+    margin: 5px 0;
+}
+
+.custom-links a {
+    color: var(--body-text-color);
+    text-decoration: none;
+}
+
+.custom-links a:hover {
+    color: var(--accent-color);
+}
+
+.custom-notice {
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.custom-notice p {
+    margin: 0;
+}
+</style>

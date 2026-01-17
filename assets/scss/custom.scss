@@ -56,6 +56,20 @@ aside.sidebar.left-sidebar {
     backdrop-filter: none !important;
 }
 
+/* 自定义侧边栏内容文字颜色 - 白色 */
+.custom-sidebar-content,
+.custom-sidebar-content h3,
+.custom-sidebar-content h4,
+.custom-sidebar-content p,
+.custom-sidebar-content li,
+.custom-sidebar-content a {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.custom-sidebar-content a:hover {
+    color: rgba(255, 255, 255, 1) !important;
+}
+
 /* ========== 小工具 - 全透明 ========== */
 .widget,
 .widget.tagCloud,
@@ -123,4 +137,46 @@ section.widget {
 .article-content .highlight pre.chroma,
 .article-content .highlight code {
     background-color: transparent !important;
+}
+
+/* ========== 手机模式下的侧边栏样式 ========== */
+@media (max-width: 1024px) {
+    /* 主菜单 - 和文章一样的半透明背景 */
+    #main-menu {
+        background-color: rgba(48, 48, 48, var(--article-opacity)) !important;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    
+    /* 菜单文字颜色 - 白色 */
+    #main-menu,
+    #main-menu a,
+    #main-menu h3,
+    #main-menu h4,
+    #main-menu p,
+    #main-menu li {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    /* 菜单链接悬停效果 */
+    #main-menu a:hover {
+        color: rgba(255, 255, 255, 1) !important;
+    }
+    
+    /* 侧边栏头部 - 全透明 */
+    .left-sidebar header {
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+    }
+    
+    /* 自定义侧边栏内容 - 全透明 */
+    #main-menu .custom-sidebar-content {
+        background-color: transparent !important;
+        backdrop-filter: none !important;
+    }
+    
+    /* 自定义通知框 - 全透明 */
+    #main-menu .custom-notice {
+        background: transparent !important;
+    }
 }
