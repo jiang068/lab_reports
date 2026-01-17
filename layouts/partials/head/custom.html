@@ -1,0 +1,24 @@
+<!-- 自定义背景透明度设置 -->
+{{- $bg := .Site.Params.backgroundOpacity -}}
+{{- if $bg -}}
+<style>
+    :root {
+        {{- if isset $bg "page" }}--bg-opacity: {{ $bg.page }};{{ end }}
+        {{- if isset $bg "sidebar" }}--sidebar-opacity: {{ $bg.sidebar }};{{ end }}
+        {{- if isset $bg "widget" }}--widget-opacity: {{ $bg.widget }};{{ end }}
+        {{- if isset $bg "toc" }}--toc-opacity: {{ $bg.toc }};{{ end }}
+        {{- if isset $bg "article" }}--article-opacity: {{ $bg.article }};{{ end }}
+        {{- if isset $bg "overlay" }}--overlay-opacity: {{ $bg.overlay }};{{ end }}
+    }
+    {{- if isset $bg "dark" }}
+    [data-scheme="dark"] {
+        {{- if isset $bg.dark "page" }}--bg-opacity: {{ $bg.dark.page }};{{ end }}
+        {{- if isset $bg.dark "sidebar" }}--sidebar-opacity: {{ $bg.dark.sidebar }};{{ end }}
+        {{- if isset $bg.dark "widget" }}--widget-opacity: {{ $bg.dark.widget }};{{ end }}
+        {{- if isset $bg.dark "toc" }}--toc-opacity: {{ $bg.dark.toc }};{{ end }}
+        {{- if isset $bg.dark "article" }}--article-opacity: {{ $bg.dark.article }};{{ end }}
+        {{- if isset $bg.dark "overlay" }}--overlay-opacity: {{ $bg.dark.overlay }};{{ end }}
+    }
+    {{- end }}
+</style>
+{{- end -}}

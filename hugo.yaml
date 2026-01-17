@@ -41,6 +41,23 @@ params:
     rssFullContent: true
     favicon:
 
+    # 背景图片透明度设置 (0.0-1.0，值越小越透明，0.0为全透明，1.0为完全不透明)
+    backgroundOpacity:
+        page: 0.4          # 页面整体背景透明度
+        sidebar: 0.0        # 侧边栏透明度 (0.0 = 全透明)
+        widget: 0.0         # 小工具透明度 (0.0 = 全透明)
+        toc: 0.85           # 目录(TOC)小工具透明度
+        article: 0.4       # 文章卡片透明度
+        overlay: 0.3        # 背景遮罩层透明度 (0.0 = 无遮罩, 1.0 = 全黑)
+        # 深色模式
+        dark:
+            page: 0.2
+            sidebar: 0.0
+            widget: 0.0
+            toc: 0.85       # 深色模式目录透明度
+            article: 0.2
+            overlay: 0.5    # 深色模式遮罩透明度
+
     footer:
         since:
         customText:
@@ -178,11 +195,11 @@ params:
             src:
 
     colorScheme:
-        # Display toggle
-        toggle: true
+        # Display toggle - 隐藏深色/浅色模式切换按钮
+        toggle: false
 
-        # Available values: auto, light, dark
-        default: auto
+        # Available values: auto, light, dark - 强制使用深色模式
+        default: dark
 
     imageProcessing:
         cover:

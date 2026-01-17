@@ -1,0 +1,126 @@
+/* 自定义全局背景样式 - 仅深色模式 */
+
+/* 深色模式透明度变量（可通过 Hugo 参数覆盖） */
+:root {
+    --bg-opacity: 0.2;            /* 页面整体背景透明度 */
+    --sidebar-opacity: 0.0;       /* 侧边栏透明度 (0.0 = 全透明) */
+    --widget-opacity: 0.0;        /* 小工具透明度 (0.0 = 全透明) */
+    --toc-opacity: 0.85;          /* 目录小工具透明度 */
+    --article-opacity: 0.2;       /* 文章卡片透明度 */
+    --overlay-opacity: 0.5;       /* 背景遮罩透明度 */
+}
+
+/* 主背景图片设置 - 固定背景 */
+html {
+    background-image: url('/img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;  /* 保持固定背景 */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #303030;
+    position: relative;
+}
+
+/* 背景遮罩层 */
+html::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, var(--overlay-opacity));
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* body 设为透明 */
+body {
+    background: transparent !important;
+}
+
+/* 页面整体背景半透明 */
+:root {
+    --body-background: rgba(48, 48, 48, var(--bg-opacity)) !important;
+}
+
+/* 主容器透明 */
+.container {
+    background: transparent !important;
+}
+
+/* ========== 侧边栏 - 全透明 ========== */
+.left-sidebar,
+aside.sidebar.left-sidebar {
+    background-color: rgba(48, 48, 48, var(--sidebar-opacity)) !important;
+    backdrop-filter: none !important;
+}
+
+/* ========== 小工具 - 全透明 ========== */
+.widget,
+.widget.tagCloud,
+.widget.archives,
+.widget.categories,
+section.widget {
+    background-color: rgba(48, 48, 48, var(--widget-opacity)) !important;
+    box-shadow: none !important;
+}
+
+/* tagCloud 标签 */
+.tagCloud-tags a {
+    background-color: rgba(48, 48, 48, 0.7) !important;
+    transition: background-color 0.3s ease;
+}
+
+.tagCloud-tags a:hover {
+    background-color: rgba(48, 48, 48, 0.9) !important;
+}
+
+/* ========== 文章相关 - 半透明 ========== */
+.article-list article,
+.article-list--compact,
+.article-list--tile article,
+.article-page .main-article,
+.main-article,
+.search-form,
+.not-found-card {
+    background: rgba(48, 48, 48, var(--article-opacity)) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* article-header 和 article-content 透明 */
+.article-page .main-article .article-header,
+.main-article .article-header,
+.article-header,
+.article-content {
+    background: transparent !important;
+}
+
+/* ========== 目录小工具 ========== */
+.widget--toc {
+    background-color: rgba(48, 48, 48, var(--article-opacity)) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* ========== 文章详情信息 ========== */
+.article-details {
+    background-color: rgba(48, 48, 48, var(--article-opacity)) !important;
+}
+
+/* ========== 代码高亮背景 ========== */
+.article-content .highlight {
+    background-color: rgba(20, 20, 20, 0.5) !important;
+}
+
+/* 子元素透明避免叠加 */
+.article-content .highlight .chroma,
+.article-content .highlight .lntable,
+.article-content .highlight .lntable tbody,
+.article-content .highlight .lntable tr,
+.article-content .highlight .lntd,
+.article-content .highlight pre.chroma,
+.article-content .highlight code {
+    background-color: transparent !important;
+}
