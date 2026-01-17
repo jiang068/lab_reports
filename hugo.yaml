@@ -1,5 +1,5 @@
 baseURL: 
-# baseURL: https://jiang068.github.io/ds/
+# baseURL: https://jiang068.github.io/lab_reports/
 # 如果是用户页面仓库（仓库名是 用户名.github.io），则用：
 # baseURL: https://你的用户名.github.io/
 languageCode: zh-cn
@@ -86,7 +86,7 @@ params:
         linksTitle: "快速链接"
         links:
             - name: "本站 github 地址"
-              url: "https://github.com/jiang068/ds/"
+              url: "https://github.com/jiang068/lab_reports/"
               external: true
             - name: "cloudflare 加速镜像站"
               url: "https://ds.fufu.blog/"

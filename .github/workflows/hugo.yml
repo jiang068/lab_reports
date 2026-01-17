@@ -62,7 +62,7 @@ jobs:
             --gc \
             --minify \
             --buildFuture \
-            --baseURL "https://jiang068.github.io/ds/"
+            --baseURL "https://jiang068.github.io/lab_reports/"
       
 
       - name: 上传构建产物
