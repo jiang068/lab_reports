@@ -41,9 +41,9 @@ $$x(n)=\left\{\begin{matrix}1&0\le n\le\frac{N}{2}-1\\0&\frac{N}{2}\le n\le N-1\
 
 ### 5.4 仿真结果  
 
-![5-1.svg](5-1.svg)
-![5-2.svg](5-2.svg)
-![5-3.svg](5-3.svg)
+![5-1.svg](/data/数字信号处理A/dsp5/5-1.svg)
+![5-2.svg](/data/数字信号处理A/dsp5/5-2.svg)
+![5-3.svg](/data/数字信号处理A/dsp5/5-3.svg)
 
 ### 5.5 结果分析
 （3）观察与比较不同截止频率的影响时域波形变化：

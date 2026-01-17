@@ -42,10 +42,10 @@ params:
 
 ### 8.4 仿真结果  
 
-![8-1.svg](8-1.svg)
-![8-2.svg](8-2.svg)
-![8-3.svg](8-3.svg)
-![8-4.svg](8-4.svg)
+![8-1.svg](/data/数字信号处理A/dsp8/8-1.svg)
+![8-2.svg](/data/数字信号处理A/dsp8/8-2.svg)
+![8-3.svg](/data/数字信号处理A/dsp8/8-3.svg)
+![8-4.svg](/data/数字信号处理A/dsp8/8-4.svg)
 
 ### 8.5 结果分析
 
