@@ -11,8 +11,9 @@
 }
 
 /* 主背景图片设置 - 固定背景 */
+/* 背景图片路径在 hugo.yaml 的 params.backgroundImage 中配置 */
+/* 在 layouts/partials/head/custom.html 中动态生成,支持本地路径和外部 URL */
 html {
-    background-image: url('/img/background.jpg');
     background-size: cover;
     background-attachment: fixed;  /* 保持固定背景 */
     background-position: center center;

@@ -22,3 +22,17 @@
     {{- end }}
 </style>
 {{- end -}}
+
+<!-- 背景图片 - 从配置文件读取 -->
+{{- if .Site.Params.backgroundImage -}}
+<style>
+    html {
+        {{- $bgImg := .Site.Params.backgroundImage -}}
+        {{- if hasPrefix $bgImg "http" -}}
+        background-image: url('{{ $bgImg }}');
+        {{- else -}}
+        background-image: url('{{ $bgImg | absURL }}');
+        {{- end -}}
+    }
+</style>
+{{- end -}}
