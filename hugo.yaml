@@ -39,7 +39,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: img/buling_doro_head.png
 
     # 背景图片设置
     backgroundImage: "img/background.jpg"  # 本地图片路径(相对于 static 文件夹)
