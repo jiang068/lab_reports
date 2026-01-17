@@ -4,7 +4,7 @@ baseURL:
 # baseURL: https://你的用户名.github.io/
 languageCode: zh-cn
 DefaultContentLanguage: zh-cn
-title: 学习资料分享站
+title: 实验报告合集
 theme: hugo-theme-stack
 
 # 设置hasCJKLanguage为true以正确处理中文内容
@@ -26,7 +26,7 @@ canonifyURLs: true
 languages:
     zh-cn:
         languageName: 简体中文
-        title: 学习资料分享站
+        title: 实验报告合集
         weight: 1
 
 module:
