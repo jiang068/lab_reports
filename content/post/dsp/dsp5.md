@@ -1,3 +1,14 @@
+---
+title: "实验5 信号通过IIR滤波器"
+slug: dsp5
+date: 2026-01-17
+draft: false
+categories: ["编程", "信号", "matlab"]
+tags: ["数字信号处理", "信号", "matlab"]
+params:
+  hidden: true
+---
+
 
 ## 实验5 信号通过IIR滤波器
 

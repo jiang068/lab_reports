@@ -1,3 +1,15 @@
+---
+title: "实验3 频谱泄漏"
+slug: dsp3
+date: 2026-01-17
+draft: false
+categories: ["编程", "信号", "matlab"]
+tags: ["数字信号处理", "信号", "matlab"]
+params:
+  hidden: true
+---
+
+
 ## 实验3 频谱泄漏
 
 ### 3.1 实验目的
@@ -42,7 +54,7 @@ $f_{s1}=\frac{1}{2T_0}$，$f_{s2}=\frac{1}{1.6T_0}$
 
 ### 3.4 仿真结果  
 
-![3.svg](3.svg)
+![3.svg](/data/数字信号处理A/dsp3/3.svg)
 
 ### 3.5 结果分析
 #### (1) CFT 表达式与特性：

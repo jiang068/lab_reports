@@ -1,3 +1,15 @@
+---
+title: "实验7 FIR滤波器的窗函数设计方法"
+slug: dsp7
+date: 2026-01-17
+draft: false
+categories: ["编程", "信号", "matlab"]
+tags: ["数字信号处理", "信号", "matlab"]
+params:
+  hidden: true
+---
+
+
 ## 实验7 FIR滤波器的窗函数设计方法
 
 ### 7.1 实验目的

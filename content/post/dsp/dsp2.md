@@ -1,3 +1,13 @@
+---
+title: "实验2 栅栏效应"
+slug: dsp2
+date: 2026-01-17
+draft: false
+categories: ["编程", "信号", "matlab"]
+tags: ["数字信号处理", "信号", "matlab"]
+params:
+  hidden: true
+---
 
 
 ## 实验2 栅栏效应
@@ -34,7 +44,7 @@ $$\hat{X}(e^{j\omega}) = \frac{1}{N} \sum_{k=0}^{N-1} X(k) \cdot \frac{1 - e^{-j
 
 ### 2.4 仿真结果  
 
-![2.svg](2.svg)
+![2.svg](/data/数字信号处理A/dsp2/2.svg)
 
 ### 2.5 结果分析
 

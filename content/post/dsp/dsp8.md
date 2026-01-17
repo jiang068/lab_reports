@@ -1,3 +1,15 @@
+---
+title: "实验8 线性相位系统"
+slug: dsp8
+date: 2026-01-17
+draft: false
+categories: ["编程", "信号", "matlab"]
+tags: ["数字信号处理", "信号", "matlab"]
+params:
+  hidden: true
+---
+
+
 ## 实验8 线性相位系统
 
 ### 8.1 实验目的

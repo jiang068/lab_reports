@@ -1,3 +1,15 @@
+---
+title: "实验6 窗函数"
+slug: dsp6
+date: 2026-01-17
+draft: false
+categories: ["编程", "信号", "matlab"]
+tags: ["数字信号处理", "信号", "matlab"]
+params:
+  hidden: true
+---
+
+
 ## 实验6 窗函数
 
 ### 6.1 实验目的

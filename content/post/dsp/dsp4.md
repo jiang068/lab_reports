@@ -1,7 +1,15 @@
 ---
-header-includes:
-  - \lstset{breaklines=true, breakatwhitespace=true}
+title: "实验4 FFT算法"
+slug: dsp4
+date: 2026-01-17
+draft: false
+categories: ["编程", "信号", "matlab"]
+tags: ["数字信号处理", "信号", "matlab"]
+params:
+  hidden: true
 ---
+
+
 ## 实验4 FFT算法
 
 ### 4.1 实验目的
