@@ -1,4 +1,4 @@
-baseURL: https://ds.fufu.blog/
+baseURL: /
 # baseURL: https://jiang068.github.io/ds/
 # 如果是用户页面仓库（仓库名是 用户名.github.io），则用：
 # baseURL: https://你的用户名.github.io/
