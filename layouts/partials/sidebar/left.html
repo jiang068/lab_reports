@@ -75,8 +75,44 @@
         </li>
         {{ end }}
         
-        {{- /* 自定义内容插入点 */ -}}
-        {{ partial "sidebar/left-custom.html" . }}
+        {{- /* 自定义侧边栏内容 - 从 hugo.yaml 读取配置 */ -}}
+        {{ if .Site.Params.sidebar }}
+        <div class="custom-sidebar-content">
+            {{- /* 标题 */ -}}
+            {{ with .Site.Params.sidebar.title }}
+            <h3>{{ . }}</h3>
+            {{ end }}
+            
+            {{- /* 描述 */ -}}
+            {{ with .Site.Params.sidebar.description }}
+            <p>{{ . }}</p>
+            {{ end }}
+            
+            {{- /* 自定义链接列表 */ -}}
+            {{ if .Site.Params.sidebar.links }}
+            <div class="custom-links">
+                {{ with .Site.Params.sidebar.linksTitle }}
+                <h4>{{ . }}</h4>
+                {{ end }}
+                <ul>
+                    {{ range .Site.Params.sidebar.links }}
+                    <li><a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .name }}</a></li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+            
+            {{- /* 自定义文字卡片 */ -}}
+            {{ if .Site.Params.sidebar.cards }}
+            {{ range .Site.Params.sidebar.cards }}
+            <div class="custom-card">
+                {{ with .title }}<h4>{{ . }}</h4>{{ end }}
+                {{ with .content }}<p>{{ . | markdownify }}</p>{{ end }}
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
         
         <li class="menu-bottom-section">
             <ol class="menu">

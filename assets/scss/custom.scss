@@ -72,7 +72,7 @@ aside.sidebar.left-sidebar {
 }
 
 /* ========== 小工具 - 全透明 ========== */
-.widget,
+.widget:not(.search-form),
 .widget.tagCloud,
 .widget.archives,
 .widget.categories,
@@ -82,13 +82,21 @@ section.widget {
 }
 
 /* tagCloud 标签 */
+.tagCloud-tags {
+    background-color: rgba(48, 48, 48, var(--article-opacity)) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: var(--card-border-radius);
+}
+
 .tagCloud-tags a {
-    background-color: rgba(48, 48, 48, 0.7) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     transition: background-color 0.3s ease;
 }
 
 .tagCloud-tags a:hover {
-    background-color: rgba(48, 48, 48, 0.9) !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
 }
 
 /* ========== 文章相关 - 半透明 ========== */
@@ -97,7 +105,6 @@ section.widget {
 .article-list--tile article,
 .article-page .main-article,
 .main-article,
-.search-form,
 .not-found-card {
     background: rgba(48, 48, 48, var(--article-opacity)) !important;
     backdrop-filter: blur(10px);
@@ -180,4 +187,110 @@ section.widget {
     #main-menu .custom-notice {
         background: transparent !important;
     }
+}
+
+/* ========== 搜索框和归档列表透明背景 ========== */
+/* 搜索表单 */
+.search-form.widget {
+    background-color: transparent !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* 搜索表单内部所有元素 */
+.search-form.widget p {
+    background: transparent !important;
+}
+
+.search-form.widget label {
+    background: transparent !important;
+}
+
+/* 输入框 - 半透明白色背景 */
+.search-form.widget input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 按钮保持透明 */
+.search-form.widget button {
+    background: transparent !important;
+}
+
+/* 归档列表 */
+.widget-archive--list {
+    background-color: transparent !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ========== 主搜索页面表单 - 半透明 ========== */
+.search-form:not(.widget) input {
+    background-color: rgba(48, 48, 48, var(--article-opacity)) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ========== 自定义侧边栏内容 ========== */
+.custom-sidebar-content {
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.custom-sidebar-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.custom-sidebar-content p {
+    font-size: 1.4rem;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+.custom-links {
+    margin-top: 15px;
+}
+
+.custom-links h4 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.custom-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-links li {
+    margin: 10px 0;
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+.custom-links a {
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.custom-card {
+    background: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.custom-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.custom-card p {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 2;
+    white-space: pre-line;
 }

@@ -57,7 +57,7 @@ params:
         dark:
             page: 0.2
             sidebar: 0.0
-            widget: 0.0
+            widget: 0.0     # 深色模式小工具透明度
             toc: 0.85       # 深色模式目录透明度
             article: 0.2
             overlay: 0.5    # 深色模式遮罩透明度
@@ -100,9 +100,9 @@ params:
             #   external: false 内部链接
         
         # 自定义文字卡片
-        cards:
-            - title: "📢 通知"
-              content: "这是通知。"
+        # cards:
+        #     - title: "📢 通知"
+        #       content: "这是通知。"
             # - title: "💡 提示"
             #   content: "支持 **Markdown** 格式哦!"
 
