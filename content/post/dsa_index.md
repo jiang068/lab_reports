@@ -1,6 +1,6 @@
 ---
 title: "数据结构及其算法"
-slug: data-structures
+slug: dsa_index
 date: 2026-01-17
 draft: false
 categories: ["编程", "算法"]
