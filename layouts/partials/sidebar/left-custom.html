@@ -1,24 +1,41 @@
-<!-- 自定义侧边栏内容 -->
-<!-- 添加在主菜单下方 -->
+<!-- 自定义侧边栏内容 - 从 hugo.yaml 读取配置 -->
+{{ if .Site.Params.sidebar }}
 <div class="custom-sidebar-content">
-    <h3>自定义内容</h3>
-    <p>这里可以添加任何自定义内容</p>
+    <!-- 标题 -->
+    {{ with .Site.Params.sidebar.title }}
+    <h3>{{ . }}</h3>
+    {{ end }}
     
-    <!-- 示例：添加一个自定义链接列表 -->
+    <!-- 描述 -->
+    {{ with .Site.Params.sidebar.description }}
+    <p>{{ . }}</p>
+    {{ end }}
+    
+    <!-- 自定义链接列表 -->
+    {{ if .Site.Params.sidebar.links }}
     <div class="custom-links">
-        <h4>快速链接</h4>
+        {{ with .Site.Params.sidebar.linksTitle }}
+        <h4>{{ . }}</h4>
+        {{ end }}
         <ul>
-            <li><a href="#">链接 1</a></li>
-            <li><a href="#">链接 2</a></li>
-            <li><a href="#">链接 3</a></li>
+            {{ range .Site.Params.sidebar.links }}
+            <li><a href="{{ .url }}"{{ if .external }} target="_blank" rel="noopener"{{ end }}>{{ .name }}</a></li>
+            {{ end }}
         </ul>
     </div>
+    {{ end }}
     
-    <!-- 示例：添加一个通知框 -->
-    <div class="custom-notice">
-        <p>📢 这是一个通知消息</p>
+    <!-- 自定义文字卡片 -->
+    {{ if .Site.Params.sidebar.cards }}
+    {{ range .Site.Params.sidebar.cards }}
+    <div class="custom-card">
+        {{ with .title }}<h4>{{ . }}</h4>{{ end }}
+        {{ with .content }}<p>{{ . | markdownify }}</p>{{ end }}
     </div>
+    {{ end }}
+    {{ end }}
 </div>
+{{ end }}
 
 <style>
 .custom-sidebar-content {
@@ -30,7 +47,12 @@
 .custom-sidebar-content h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    color: var(--accent-color);
+}
+
+.custom-sidebar-content p {
+    font-size: 1.4rem;
+    line-height: 2;  /* 增加行距 */
+    white-space: pre-line;  /* 保留换行符 */
 }
 
 .custom-links {
@@ -38,7 +60,7 @@
 }
 
 .custom-links h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 8px;
 }
 
@@ -49,26 +71,34 @@
 }
 
 .custom-links li {
-    margin: 5px 0;
+    margin: 10px 0;  /* 增加列表项之间的间距 */
+    font-size: 1.4rem;
+    line-height: 2;  /* 增加行距 */
 }
 
 .custom-links a {
-    color: var(--body-text-color);
     text-decoration: none;
+    font-size: 1.4rem;
 }
 
-.custom-links a:hover {
-    color: var(--accent-color);
-}
-
-.custom-notice {
+.custom-card {
     background: transparent;
     padding: 10px;
     border-radius: 5px;
     margin-top: 15px;
+    border-left: 3px solid var(--accent-color);
 }
 
-.custom-notice p {
+.custom-card h4 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.custom-card p {
     margin: 0;
+    font-size: 1.4rem;
+    line-height: 2;  /* 增加行距 */
+    white-space: pre-line;  /* 保留换行符 */
 }
 </style>
