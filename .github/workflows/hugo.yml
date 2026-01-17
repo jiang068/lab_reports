@@ -62,7 +62,7 @@ jobs:
             --gc \
             --minify \
             --buildFuture \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      
 
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v3
