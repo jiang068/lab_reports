@@ -19,8 +19,8 @@ permalinks:
     post: /:slug/
     page: /:slug/
 
-relativeURLs: false
-canonifyURLs: true
+relativeURLs: true
+canonifyURLs: false
 
 # 语言设置
 languages:
