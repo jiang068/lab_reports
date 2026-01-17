@@ -18,6 +18,9 @@ permalinks:
     post: /:slug/
     page: /:slug/
 
+relativeURLs: true
+canonifyURLs: false
+
 # 语言设置
 languages:
     zh-cn:
