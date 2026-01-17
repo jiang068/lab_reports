@@ -241,6 +241,6 @@ int main() {
 ```
 
 ## 原代码和数据下载
-- [4.cpp](../../../data/c2/4/4.cpp)
-- [city.txt](../../../data/c2/4/city.txt)
-- [dist.txt](../../../data/c2/4/dist.txt)
+- [4.cpp](/data/c2/4/4.cpp)
+- [city.txt](/data/c2/4/city.txt)
+- [dist.txt](/data/c2/4/dist.txt)

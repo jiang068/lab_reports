@@ -15,4 +15,4 @@ params:
 
 ## 参考资料
 
-- [binary_fund.pdf](../../../data/binary_fund.pdf)
+- [binary_fund.pdf](/data/binary_fund.pdf)

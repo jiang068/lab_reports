@@ -200,7 +200,7 @@ int main() {
 
 
 ## 原代码和数据下载
-- [3.cpp](../../../data/c2/3/3.cpp)
-- [stdio.h](../../../data/c2/3/stdio.h)
-- [encoded.bin](../../../data/c2/3/encoded.bin)
-- [decoded.txt](../../../data/c2/3/decoded.txt)
+- [3.cpp](/data/c2/3/3.cpp)
+- [stdio.h](/data/c2/3/stdio.h)
+- [encoded.bin](/data/c2/3/encoded.bin)
+- [decoded.txt](/data/c2/3/decoded.txt)

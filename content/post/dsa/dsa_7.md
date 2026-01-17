@@ -46,4 +46,4 @@ params:
 完成本实验的同学可获得实验加分。
 
 ## 数据下载
-- [records.txt](../../../data/c2/7/records.txt)
+- [records.txt](/data/c2/7/records.txt)

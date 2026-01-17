@@ -254,4 +254,4 @@ int main() {
 
 
 ## 原代码下载
-- [5.cpp](../../../data/c2/5/5.cpp)
+- [5.cpp](/data/c2/5/5.cpp)
